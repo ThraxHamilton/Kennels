@@ -1,0 +1,80 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "Jessica Younker"
+        },
+        {
+            "id": 2,
+            "name": "Jordan Nelson"
+        },
+        {
+            "id": 3,
+            "name": "Zoe LeBlanc"
+        },
+        {
+            "id": 4,
+            "name": "Blaise Roberts"
+        }
+    ],
+    "owners": [
+        {
+            "id": 1,
+            "name": "Bob Sagett ",
+            "phone": "323-476-8952"
+        },
+        {
+            "id": 2,
+            "name": "Steve Jobs ",
+            "phone": "1-800-555-2779"
+        },
+        {
+            "id": 3,
+            "name": "Willie Green ",
+            "phone": "310-555-8946"
+        },
+        {
+            "id": 4,
+            "name": "Dee Dee Ramone ",
+            "phone": "615-867-5309"
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "name": "Nashville North",
+            "address": "500 Circle Way"
+        },
+        {
+            "id": 2,
+            "name": "Nashville South",
+            "address": "10101 Binary Court"
+        }
+    ],
+    "animals": [
+        {
+            "id": 1,
+            "name": "Doodles"
+        },
+        {
+            "id": 2,
+            "name": "Jack"
+        },
+        {
+            "id": 3,
+            "name": "Angus"
+        },
+        {
+            "id": 4,
+            "name": "Henley"
+        },
+        {
+            "id": 5,
+            "name": "Derkins"
+        },
+        {
+            "id": 6,
+            "name": "Checkers"
+        }
+    ]
+}
