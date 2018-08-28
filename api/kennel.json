@@ -46,6 +46,18 @@
     {
       "id": 6,
       "name": "Checkers"
+    },
+    {
+      "name": "Big Bully",
+      "breed": "Pitbull",
+      "employeeId": 2,
+      "id": 7
+    },
+    {
+      "name": "King",
+      "breed": "Rocwiller",
+      "employeeId": 1,
+      "id": 8
     }
   ]
 }
