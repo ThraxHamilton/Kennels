@@ -14,6 +14,7 @@ import LocationManager from '../modules/LocationManager'
 import OwnerList from './owners/OwnerList'
 import OwnerManager from '../modules/OwnerManager'
 import OwnerDetail from './owners/OwnerDetail'
+import OwnerForm from './owners/OwnerForm'
 
 
 export default class ApplicationViews extends Component {
@@ -55,6 +56,7 @@ export default class ApplicationViews extends Component {
         // .then(owners => newState.owners = owners)
         // .then(() => this.setState(newState))
     }
+    // ADD 
     // Add animal promise
     addAnimal = animal => AnimalManager.post(animal)
         .then(() => AnimalManager.getAll())
@@ -62,13 +64,20 @@ export default class ApplicationViews extends Component {
             animals: animals
         }))
     // Add employee 
-    addEmployee = employee => EmployeeManager.post(employee)
+    addEmployees = employee => EmployeeManager.post(employee)
         .then(() => EmployeeManager.getAll())
         .then(employees => this.setState({
             employees: employees
         }))
+    // Add Owner
+    addOwners = owner => OwnerManager.post(owner)
+        .then(() => OwnerManager.getAll())
+        .then(owners => this.setState({
+            owners: owners
+        }))  
 
 
+// DELETE FUNCTIONS
     // Delete animal Function
     deleteAnimal = id => {
         return fetch(`http://localhost:5002/animals/${id}`, {
@@ -107,6 +116,7 @@ export default class ApplicationViews extends Component {
     }
 
 
+// RENDER FUNCTION(s)
     render() {
         return (
             <React.Fragment>
@@ -134,7 +144,6 @@ export default class ApplicationViews extends Component {
                 }} />
 
                 {/* EMPLOYEES */}
-
                 {/* Exact path for employee details on new address */}
                 <Route exact path="/employees/:employeeId(\d+)" render={(props) => {
                     return <EmployeeDetail {...props} deleteEmployee={this.deleteEmployee} employees={this.state.employees} />
@@ -148,19 +157,27 @@ export default class ApplicationViews extends Component {
                 {/* Add Employee */}
                 <Route path="/employees/new" render={(props) => {
                     return <EmployeeForm {...props}
-                        addEmployee={this.addEmployee}
+                        addEmployees={this.addEmployees}
                         employees={this.state.employees} />
                 }} />
 
-
                 {/* OWNERS */}
                 {/* Path to display owner list/card and delete from API */}
-                <Route exact path="/owners" render={(props) => {
-                    return <OwnerList deleteOwners={this.deleteOwners} owners={this.state.owners} />
-                }} />
                 {/* Exact path for details */}
                 <Route exact path="/owners/:ownerId(\d+)" render={(props) => {
                     return <OwnerDetail {...props} deleteOwner={this.deleteOwner} owners={this.state.owners} />
+                }} />
+                {/* Display Owners */}
+                <Route exact path="/owners" render={(props) => {
+                    return <OwnerList {...props}
+                        deleteOwner={this.deleteOwner}
+                        owners={this.state.owners} />
+                }} />
+                {/* Add Owner */}
+                <Route path="/owners/new" render={(props) => {
+                    return <OwnerForm {...props}
+                        addOwners={this.addOwner}
+                        owners={this.state.owners} />
                 }} />
 
 

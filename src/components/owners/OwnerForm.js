@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 
-export default class EmployeeForm extends Component {
+export default class OwnerForm extends Component {
     // Set initial state
     state = {
-        employee: ""
+        owner: ""
     }
 
     // Update state whenever an input field is edited
@@ -17,34 +17,34 @@ export default class EmployeeForm extends Component {
         Local method for validation, creating animal object, and
         invoking the function reference passed from parent component
      */
-    constructNewEmployee = evt => {
+    constructNewOwner = evt => {
         evt.preventDefault()
-        if (this.state.employee === "") {
+        if (this.state.owner === "") {
             window.alert("Please select a caretaker")
         } else {
-            const newEmployee = {
-                name: this.state.employee,
+            const AddNewOwner = {
+                name: this.state.owner,
             }
 
             // Create the employee and redirect user to employee list
-            this.props.addEmployees(newEmployee).then(() => this.props.history.push("/employees"))
+            this.props.addOwners(AddNewOwner).then(() => this.props.history.push("/owners"))
         }
     }
 
     render() {
         return (
             <React.Fragment>
-                <form className="EmployeeForm">
+                <form className="OwnerForm">
                     <div className="form-group">
-                        <label htmlFor="employeeName">New Employee</label>
+                        <label htmlFor="ownerName">New Employee</label>
                         <input type="text" required="true"
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="employee"
+                            id="owner"
                             placeholder="Employee Name" />
                     </div>
 
-                    <button type="submit" onClick={this.constructNewEmployee} className="btn btn-primary">Submit</button>
+                    <button type="submit" onClick={this.constructNewOwner} className="btn btn-primary">Submit</button>
                 </form>
             </React.Fragment>
         )
