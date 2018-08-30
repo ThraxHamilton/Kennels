@@ -22,12 +22,12 @@ export default class OwnerForm extends Component {
         if (this.state.owner === "") {
             window.alert("Please select a caretaker")
         } else {
-            const AddNewOwner = {
+            const addNewOwner = {
                 name: this.state.owner,
             }
 
             // Create the employee and redirect user to employee list
-            this.props.addOwners(AddNewOwner).then(() => this.props.history.push("/owners"))
+            this.props.addOwners(addNewOwner).then(() => this.props.history.push("/owners"))
         }
     }
 

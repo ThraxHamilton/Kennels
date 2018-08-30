@@ -7,6 +7,10 @@
     {
       "id": 2,
       "name": "Jordan Nelson"
+    },
+    {
+      "name": "Solange",
+      "id": 3
     }
   ],
   "owners": [
@@ -24,6 +28,10 @@
       "id": 4,
       "name": "Dee Dee Ramone ",
       "phone": "615-867-5309"
+    },
+    {
+      "name": "Bas",
+      "id": 6
     }
   ],
   "locations": [
@@ -58,6 +66,30 @@
       "breed": "Rocwiller",
       "employeeId": 1,
       "id": 8
+    },
+    {
+      "name": "Scooby",
+      "breed": "Lab Retriver",
+      "employeeId": 2,
+      "id": 9
+    },
+    {
+      "name": "Pluto",
+      "breed": "French Bulldog",
+      "employeeId": 2,
+      "id": 10
+    },
+    {
+      "name": "Michael",
+      "breed": "Yorkie",
+      "employeeId": 1,
+      "id": 11
+    },
+    {
+      "name": "Zack",
+      "breed": "Bulldog",
+      "employeeId": 1,
+      "id": 12
     }
   ]
 }

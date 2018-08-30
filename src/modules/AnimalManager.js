@@ -11,6 +11,11 @@ export default Object.create(null, {
             return fetch(`${remoteURL}/animals`).then(e => e.json())
         }
     },
+    edit: {
+        value: function (animal, id) {
+            return fetch(`${remoteURL}/animals/${id}`).then(e => e.json())
+        }
+    },
     post: {
         value: function (newAnimal) {
             return fetch(`${remoteURL}/animals`, {
