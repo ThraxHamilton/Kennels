@@ -25,7 +25,7 @@ class OwnerList extends Component {
                         {owner.phone}
                         <Link className="nav-link" to={`/owners/${owner.id}`}>Details</Link>
                             <a href="#"
-                                onClick={() => this.props.deleteOwners(owner.id)}
+                                onClick={() => this.props.deleteOwner(owner.id)}
                                 className="card-link">Delete</a>
                         </h5>
                     </div>

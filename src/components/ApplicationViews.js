@@ -170,13 +170,13 @@ export default class ApplicationViews extends Component {
                 {/* Display Owners */}
                 <Route exact path="/owners" render={(props) => {
                     return <OwnerList {...props}
-                        deleteOwner={this.deleteOwner}
+                        deleteOwner={this.deleteOwners}
                         owners={this.state.owners} />
                 }} />
                 {/* Add Owner */}
                 <Route path="/owners/new" render={(props) => {
                     return <OwnerForm {...props}
-                        addOwners={this.addOwner}
+                        addOwners={this.addOwners}
                         owners={this.state.owners} />
                 }} />
 
